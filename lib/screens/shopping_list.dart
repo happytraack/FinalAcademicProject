@@ -21,11 +21,11 @@ class _ShoppingListState extends State<ShoppingList> {
     refreshNote();
   }
 
-  @override
-  void dispose() {
-    NotesDatabase.instance.close();
-    super.dispose();
-  }
+  // @override
+  // void dispose() {
+  //   NotesDatabase.instance.close();
+  //   super.dispose();
+  // }
 
   Future refreshNote() async {
     setState(() => isLoading = true);
@@ -39,7 +39,7 @@ class _ShoppingListState extends State<ShoppingList> {
             'Shopping List',
             style: TextStyle(fontSize: 24),
           ),
-          actions: [Icon(Icons.search), SizedBox(width: 12)],
+          // actions: [Icon(Icons.search), SizedBox(width: 12)],
         ),
         body: Center(
           child: isLoading
